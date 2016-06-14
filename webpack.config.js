@@ -26,7 +26,19 @@ const config = {
     }, {
       test: /\.css$/,
       loaders: ['style', 'css']
-    }]
+    }, {
+      test: /\.eot$/,
+      loader: 'url?mimetype=application/vnd.ms-fontobject'
+    }, {
+      test: /\.(woff|woff2)$/,
+      loader: 'url?mimetype=application/font-woff'
+    }, {
+      test: /\.ttf$/,
+      loader: 'url?mimetype=application/octet-stream'
+    }, {
+      test: /\.svg$/,
+      loader: 'url?mimetype=image/svg+xml'
+    } ]
   }
 }
 

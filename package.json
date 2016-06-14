@@ -18,8 +18,10 @@
     "eslint-plugin-promise": "^1.3.2",
     "eslint-plugin-react": "^5.1.1",
     "eslint-plugin-standard": "^1.3.2",
+    "file-loader": "^0.8.5",
     "react-hot-loader": "^1.3.0",
     "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
@@ -27,6 +29,7 @@
   "dependencies": {
     "axios": "^0.12.0",
     "body-parser": "^1.15.1",
+    "bootswatch": "^3.3.6",
     "connect-flash": "^0.1.1",
     "dotenv": "^2.0.0",
     "express": "^4.13.4",

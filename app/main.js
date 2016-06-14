@@ -10,6 +10,9 @@ import {
   IndexRoute,
   Redirect
 } from 'react-router'
+import '../node_modules/bootswatch/yeti/bootstrap.css'
+import '../node_modules/animate.css/animate.min.css'
+import '../node_modules/notificationsjs/lib/style.css'
 import '../css/main.css'
 
 const channels = window.INITIAL_STATE.channels

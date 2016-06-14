@@ -20,7 +20,7 @@ If you want to run Realtime Chat locally, you'll first need to clone the Git rep
 ```
 git clone https://github.com/alexbooker/pusher-realtime-chat.git
 cd pusher-realtime-chat
-npm run install
+npm install
 ```
 
 

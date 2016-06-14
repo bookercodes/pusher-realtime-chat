@@ -10,6 +10,7 @@ import {
   IndexRoute,
   Redirect
 } from 'react-router'
+import '../css/main.css'
 
 const channels = window.INITIAL_STATE.channels
 

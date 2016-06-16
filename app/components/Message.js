@@ -6,7 +6,7 @@ const Message = React.createClass({
     return (
       <Media className='message'>
         <Media.Left>
-          <img width={32} height={32} src={this.props.message.user.avatarUrl} alt={this.props.message.user.username} />
+          <img className='message__author-avatar' src={this.props.message.user.avatarUrl} alt={this.props.message.user.username} />
         </Media.Left>
         <Media.Body>
           <p>{this.props.message.text}</p>

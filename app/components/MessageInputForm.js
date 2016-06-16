@@ -51,7 +51,7 @@ const MessageInputForm = React.createClass({
   render () {
     return (
       <form onSubmit={this.handleSubmit}>
-        <FormGroup validationState={this.state.validationState}>
+        <FormGroup className='messages-panel__form-group' validationState={this.state.validationState}>
           <InputGroup>
             <FormControl
               type='text'

@@ -14,11 +14,8 @@ const Footer = ({
       <Button
         href='/login/twitter'
         bsStyle='primary'>
-        <span style={{
-          display: 'flex',
-          alignItems: 'center'
-        }}>
-          <TwitterIcon size={21} fill='white' />
+        <span className='icon-group'>
+          <TwitterIcon />
           Login with Twitter
         </span>
       </Button> if you want to join the conversation
@@ -38,8 +35,7 @@ const MessagePanel = ({
     bsStyle='info'
     className='messages-panel' >
     <MessageList
-      messages={messages}
-      style={{overflow: 'scroll'}} />
+      messages={messages} />
   </Panel>
 )
 

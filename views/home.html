@@ -2,10 +2,11 @@
 <html>
 <head>
   <title>Realtime Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
   <!-- {{ messages | dump }} -->
-  <div id="app" class="channel-view"></div>
+  <div id="app" class="app"></div>
   <div id="notifications"></div>
   <script>
     window.INITIAL_STATE = {{context|dump|safe}};

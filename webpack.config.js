@@ -25,7 +25,7 @@ const config = {
       loaders: ['react-hot', 'babel']
     }, {
       test: /\.css$/,
-      loaders: ['style', 'css']
+      loaders: ['style', 'css', 'postcss']
     }, {
       test: /\.eot$/,
       loader: 'url?mimetype=application/vnd.ms-fontobject'
@@ -39,6 +39,9 @@ const config = {
       test: /\.svg$/,
       loader: 'url?mimetype=image/svg+xml'
     } ]
+  },
+  postcss () {
+    return [require('postcss-nested'), require('postcss-simple-vars')]
   }
 }
 

@@ -1,35 +1,31 @@
 import React from 'react'
-import {LinkContainer, IndexLinkContainer} from 'react-router-bootstrap'
-import {NavItem} from 'react-bootstrap'
+import {Link, IndexLink} from 'react-router'
 
 const VerticalChannelNavItem = React.createClass({
-  renderNavItem () {
+  renderLink () {
+    if (this.props.index === 0) {
+      return (
+        <IndexLink
+          to={`/channels/${this.props.channel}`}
+          className='channel-nav__link'
+          activeClassName='active'>
+          {this.props.channel}
+        </IndexLink>
+      )
+    }
     return (
-      <NavItem style={{
-        float: 'none',
-        display: 'block'
-      }}>
-      {this.props.channel}
-      </NavItem>
+      <Link
+        to={`/channels/${this.props.channel}`}
+        className='channel-nav__link'
+        activeClassName='active'>
+        {this.props.channel}
+      </Link>
     )
   },
 
   render () {
-    if (this.props.index === 0) {
-      return (
-        <IndexLinkContainer
-          to={`/channels/${this.props.channel}`}
-          activeClassName='active'>
-          {this.renderNavItem()}
-        </IndexLinkContainer>
-      )
-    }
     return (
-      <LinkContainer
-        to={`/channels/${this.props.channel}`}
-        activeClassName='active'>
-        {this.renderNavItem()}
-      </LinkContainer>
+      <li>{this.renderLink()}</li>
     )
   }
 })

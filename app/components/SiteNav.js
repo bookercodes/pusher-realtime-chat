@@ -14,11 +14,8 @@ const SiteNav = React.createClass({
   renderLoginNavItem () {
     return (
       <NavItem href='/login/twitter'>
-        <span style={{
-          display: 'flex',
-          alignItems: 'center'
-        }}>
-          <TwitterIcon size={21} fill='white' />
+        <span className='icon-group'>
+          <TwitterIcon />
           Login with Twitter
         </span>
       </NavItem>
@@ -28,7 +25,7 @@ const SiteNav = React.createClass({
   renderAccountNavDropdown () {
     const title = (
       <span>
-        <Image src={this.props.user.photo} className='nav-avatar' />
+        <Image src={this.props.user.photo} className='avatar' />
         {this.props.user.displayName}
       </span>
     )
@@ -41,7 +38,7 @@ const SiteNav = React.createClass({
 
   render () {
     return (
-      <Navbar className='site-nav' inverse fluid>
+      <Navbar className='site-nav' inverse fluid fixedTop>
         <Navbar.Header>
           <Navbar.Brand>
             <a href='#'>Realtime Chat</a>

@@ -1,7 +1,6 @@
 /* global btoa */
 import React from 'react'
 import Pusher from 'pusher-js'
-import {Grid, Col, Row} from 'react-bootstrap'
 import {MessagePanel, VerticalChannelNav} from '../components'
 import * as messageSource from '../sources/messageSource'
 import Notifications from 'notificationsjs'
@@ -62,19 +61,13 @@ const Chat = React.createClass({
 
   render () {
     return (
-      <Grid fluid>
-        <Row className='show-grid'>
-          <Col className='channels' xs={12} md={2} style={{padding: 0}}>
-            <VerticalChannelNav channels={this.props.route.channels} />
-          </Col>
-          <Col className='messages' xs={12} md={8} style={{padding: 0}}>
-            <MessagePanel
-              {...this.props}
-              messages={this.state.channelMessages}
-              handleSubmit={this.onMessageSubmitted} />
-          </Col>
-        </Row>
-      </Grid>
+      <div className='chat'>
+        <VerticalChannelNav channels={this.props.route.channels} />
+        <MessagePanel
+          {...this.props}
+          messages={this.state.channelMessages}
+          handleSubmit={this.onMessageSubmitted} />
+      </div>
     )
   }
 })

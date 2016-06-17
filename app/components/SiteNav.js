@@ -1,5 +1,5 @@
 import React from 'react'
-import TwitterIcon from './icons/TwitterIcon'
+import TwitterIcon from './TwitterIcon'
 import {LinkContainer} from 'react-router-bootstrap'
 import {
   Navbar,

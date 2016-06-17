@@ -1,4 +1,5 @@
 $breakpoint: 680px;
+$color-blue: #8ac0d9;
 $background-color: #333;
 
 body,
@@ -80,9 +81,27 @@ body {
   border: none;
   display: flex;
   flex-direction: column;
-
   .panel-body {
-    flex-grow: 1;
+    overflow-y: auto;
+    flex: 1;
+    &::-webkit-scrollbar-track {
+      background-color: #b8babf;
+      margin: 6px 0;
+    }
+
+    &::-webkit-scrollbar {
+      background-color: #b8babf;
+      width: 9px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #777;
+    }
+  }
+
+  .panel-footer {
+    background-color: #f5f5f5;
+    flex-basis: 60px;
   }
 
   &__form-group {
@@ -91,10 +110,48 @@ body {
 }
 
 .message {
+  margin-bottom: 20px;
+
+  &__top {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__text {
+    background-color: $color-blue;
+    padding: 7px;
+    margin-bottom: 2px;
+    border-radius: 4px;
+    position: relative;
+    max-width: 720px;
+    display: inline-block;
+
+    &::before {
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: -20px;
+      top: 5px;
+      border: 10px solid;
+      border-color: transparent $color-blue transparent transparent;
+    }
+  }
+
   &__author-avatar {
-    $size: 32px;
+    $size: 34px;
+    flex: 0 0 $size;
     width: $size;
     height: $size;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  &__time {
+    display: block;
+    color: #8899a6;
+    font-size: 11px;
+    margin-left: 0;
   }
 }
 

@@ -1,7 +1,7 @@
 /* global btoa */
 import React from 'react'
 import Pusher from 'pusher-js'
-import {MessagePanel, VerticalChannelNav} from '../components'
+import {ChatPage, VerticalChannelNav} from '../components'
 import * as messageSource from '../sources/messageSource'
 import Notifications from 'notificationsjs'
 
@@ -63,7 +63,7 @@ const Chat = React.createClass({
     return (
       <div className='chat'>
         <VerticalChannelNav channels={this.props.route.channels} />
-        <MessagePanel
+        <ChatPage
           {...this.props}
           messages={this.state.channelMessages}
           handleSubmit={this.onMessageSubmitted} />

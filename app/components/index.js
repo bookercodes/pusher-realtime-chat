@@ -7,4 +7,4 @@
 export const VerticalChannelNav = require('./VerticalChannelNav').default
 export const MessageList = require('./MessageList').default
 export const MessageInputForm = require('./MessageInputForm').default
-export const MessagePanel = require('./MessagePanel').default
+export const ChatPage = require('./ChatPage').default

@@ -3,7 +3,6 @@ import React from 'react'
 import Pusher from 'pusher-js'
 import {ChatPage, VerticalChannelNav} from '../components'
 import * as messageSource from '../sources/messageSource'
-import Notifications from 'notificationsjs'
 
 const Chat = React.createClass({
   getInitialState () {
@@ -19,24 +18,13 @@ const Chat = React.createClass({
   },
 
   subToNewChannelMessages () {
-    this.pusher = new Pusher('d55447385c490cb7e41a')
+    this.pusher = new Pusher('07a51219d95bf978b342')
     this.channel = this.pusher.subscribe(btoa(this.props.params.channelName))
     const eventName = 'new_message'
     this.channel.bind(eventName, channelMessage => {
       this.setState({
         channelMessages: this.state.channelMessages.concat(channelMessage)
       })
-    })
-    this.notifications = new Notifications({
-      closeAfter: 2000,
-      pusher: {
-        instance: this.pusher,
-        channelName: this.channel.name,
-        eventName: eventName,
-        transform: event => {
-          return `${event.user.username} said ${event.text}`
-        }
-      }
     })
   },
 
